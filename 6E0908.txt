@@ -1,1 +1,14 @@
 
+    char bleData[512];
+
+    while (1)
+    {
+        if (xQueueReceive(
+                queueBLE,
+                bleData,
+                portMAX_DELAY) == pdPASS)
+        {
+            ESP_LOGI(
+                TAG,
+                "================================"
+            );
